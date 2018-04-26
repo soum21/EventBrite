@@ -1,0 +1,17 @@
+{
+  "name": "angularbowerstrat",
+  "version": "1.0.0",
+  "description": "simpleapp",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Towiq",
+  "license": "ISC",
+  "dependencies": {
+    "http-server": "^0.11.1"
+  },
+  "devDependencies": {
+    "@angular/cli": "^1.7.4"
+  }
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>EventBriteApi-UI</title>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    
+    <nav class="navbar navbar-inverse">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">EventBrite Api </a>
+          </div>
+          <div id="navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="#!/page1"><i class="fa fa-calendar"></i> EventList</a></li>
+              <li><a href="#!/page2"><i class="fa fa-ticket"></i>Add Event</a></li>
+  
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+      <div class="container">
+  
+          <ng-view></ng-view>
+      </div>
+
+
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-route/angular-route.js"></script>
+<script src="bower_components/firebase/firebase.js"></script>
+<script src="bower_components/angularfire/dist/angularfire.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/danialfarid-angular-file-upload/12.2.13/ng-file-upload.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/danialfarid-angular-file-upload/12.2.13/ng-file-upload-shim.min.js"></script>
+<script src="app.js"></script>
+<script src="page1/page1.js"></script>
+<script src="page2/page2.js"></script>
+<script src="page3/page3.js"></script>
+
+<script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyCe50aABbO56dABTDbYNQM8Xy67nDhRe_o",
+      authDomain: "eventbriteapi-cd61d.firebaseapp.com",
+      databaseURL: "https://eventbriteapi-cd61d.firebaseio.com",
+      projectId: "eventbriteapi-cd61d",
+      storageBucket: "eventbriteapi-cd61d.appspot.com",
+      messagingSenderId: "73767654835"
+    };
+    firebase.initializeApp(config);
+  </script>
+
+</body>
+</html>

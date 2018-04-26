@@ -1,0 +1,33 @@
+<div class="container">
+        <div class="well well-sm"><h1>Event List</h1>
+            <h3>Search: <input type="text" ng-model="search"> </h3>
+         </div>
+         <div class="panel panel-default">
+<table class="table table-hover">
+        <thead>
+          <tr>
+            <th class="breadcrumb">Image</th>
+            <th class="breadcrumb">Event Name</th>
+            <th class="breadcrumb">Event Date</th>
+            <th class="breadcrumb">Event Price</th>
+            <th class="breadcrumb">Event Type</th>
+            <th class="breadcrumb" width=200 >Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="event in data | filter:search">
+            <td class="breadcrumb"><img ng-src="{{event.imageUrl}}" alt="" width=155></td>
+            <td class="breadcrumb">{{event.name}}</td>
+            <td class="breadcrumb">{{event.date}}</td>
+            <td class="breadcrumb">{{event.price}}</td>
+            <td class="breadcrumb">{{event.singleSelect}}</td>
+           <td class="breadcrumb">  
+                <a href="#!/page3/{{event.$id}}" class="btn btn-info">Edit</a> 
+                <a href="#!/page3/{{event.$id}}" ng-click="deleteEvent(event)" class="btn btn-danger">Delete</a> 
+ <!-- <a href="" ng-click="deleteStudent(student)" class="btn btn-danger">Delete</a>  -->
+            </td>
+          </tr>
+        </tbody>
+  </table>
+</div>
+</div>
